@@ -1,0 +1,53 @@
+<html> 
+<head> 
+<title>
+Specalne zadanie, bawie sie w nauczyciela xd
+</title>
+ <script language="JavaScript">
+function srednia(o1,o2,o3,o4,w1,w2,w3,w4)
+{
+ o1=parseFloat(o1);
+ o2=parseFloat(o2);
+ o3=parseFloat(o3);
+ o4=parseFloat(o4);
+ w1=parseFloat(w1);
+ w2=parseFloat(w2);
+ w3=parseFloat(w3);
+ w4=parseFloat(w4);
+ srednia=parseFloat(srednia);
+srednia=o1*w1+o2*w2+o3*w3+o4*w4;
+
+alert(srednia)
+}
+ </script>
+</head> 
+<body> 
+Podliczanie sredniej 
+<br> <br>
+<form name="formularz" action="..." onsubmit="srednia(this.o1.value,this.o2.value,this.o3.value,this.o4.value,this.w1.value,this.w2.value,this.w3.value,this.w4.value,);return false"> 
+return false"> 
+O1 =
+<input size="6" name="o1">
+O2 =
+<input size="6" name="o2">
+O3 =
+<input size="6" name="o3">
+O4 =
+<input size="6" name="o4">
+W1 =
+<input size="6" name="w1">
+W2 =
+<input size="6" name="w2">
+W3 =
+<input size="6" name="w3">
+W4 =
+<input size="6" name="w4">
+<br>
+<br>
+<input TYPE="submit" Value="oblicz" >
+</form>
+<br>
+<br>
+
+</body> 
+</html>
