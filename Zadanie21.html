@@ -1,0 +1,29 @@
+<html> 
+<head> 
+<title>
+ Drabina
+</title>
+</head>
+<body>
+    Wysokosc: <input type="number" id="x">
+    Dlugosc: <input type="number" id="d"><br><br>
+    <button oneclick="javascript:oblicz()">Oblicz</button>
+    <div id="Drabina"></div>
+
+<script>
+    var d,x,P,drabina,alfa;
+    function oblicz(){
+        x=document.getElementById('x').value;
+        d=document.getElementById('d').value;
+        var x=parseFloat(x);
+        var d=parseFloat(d);
+        P=x*x+d*d;
+        drabina=Math.sqrt(P);
+        a=d/x;
+        alfa=Math.atan(a)*180/3.14;
+        document.getElementById('drabina').innerText="Długość wynosi: " + drabina + "alfa wynosi: "+ alfa +".";
+    
+    }
+</script>
+</body>
+</html>
