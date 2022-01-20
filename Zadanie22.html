@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Arturek i Dawidek </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+    Odległość <input type="number" id="odleglosc"><br><br>
+    Droga <input type="number" id="droga"><br><br>
+    <button onclick="javascript: oblicz()">Oblicz</button>
+    <div id="kat"></div>
+    <div id="wys"></div>
+    <script>
+        function oblicz(){
+            var x = document.getElementById('odleglosc').value;
+            var y = document.getElementById('droga').value;
+            x = parseFloat(x);
+            y = parseFloat(y);
+            var wys = (y * y) - (x * x);
+            wys = Math.sqrt(wys);
+            var z = wys / x;
+            z = Math.atan(z);
+            var kat = z * 180 / 3.14;
+            document.getElementById('kat').innerText = 'Kąt wynosi ' + kat;
+            document.getElementById('wys').innerText = 'Wysokość wynosi ' + wys;
+        }
+    </script>
+</body>
+</html>
