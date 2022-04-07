@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet"href="style.css">
+    </head>
+    <meta charset="utf-8">
+    <title>Zamowienia Kawy</title>
+<body>
+     <div id="header">
+         <div class="header-logo">
+             <img src="logo.png" alt="hurtownia">
+         </div>
+     <div class="header-menu">
+         <a href="index.html">Strona</a>
+         <a href="zamowienia.html">Zamowienia</a>
+         <a href="blog.html">Blog</a>
+         <a href=" http://gatunki-kawy.pl/" target="_blank">Gatunki</a>
+     </div>
+     </div>
+     <div class="banner">
+         <h1>Hurtownia kawy</h1>
+     </div>
+     </div>
+     <div id="cont">
+         <div class="cont-left">
+             <h2>Oferta</h2>
+             <ol>
+                 <li>Kawa palona Arabica</li>
+                 <li>Kawa palona Robusta</li>
+                 <li>Kawa bezkofeinowa</li>
+                 <li><s>Kawa zielona</s></li>
+             </ol>         
+    </div>
+    <div>
+        <div class="cont-right">
+            Podaj numer kawy: <br>
+            <input id="kawa"><br>
+            Poda wagę w dekagramach: <br>
+            <input id="waga">
+            <button onclick="zamow();">Zamów</button>
+            <div id="kwota"></div>
+            <script>
+                function oblicz(){
+                   var kawa = document.getElementById('kawa').value;
+                   var waga = document.getElementById('waga').value;
+                   waga = parseInt(waga);
+                    var cena;
+                    switch(kawa){
+                        case '1':
+                        cena=5;
+                        break;
+                        case '2':
+                        cena=6;
+                        break;
+                        case '3':
+                        cena=7;
+                        break;
+                        default:
+                        cena=0;
+                        break;
+                    }
+                    var kwota = cena * waga;
+                    document.getElementById('kwota').innerText=kwota;
+              }
+            </script>
+        </div>
+    </div>
+     </div>
+     <div class="footer">
+        <h1>Prace przygotował: 00000000</h1>
+    </div>
+</body>
+</html>
